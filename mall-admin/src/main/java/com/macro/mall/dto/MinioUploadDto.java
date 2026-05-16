@@ -1,5 +1,6 @@
 package com.macro.mall.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -8,8 +9,10 @@ import lombok.EqualsAndHashCode;
  * Created by macro on 2019/12/25.
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode
 public class MinioUploadDto {
+    @Schema(title = "文件访问URL")
     private String url;
+    @Schema(title = "文件名称")
     private String name;
 }
